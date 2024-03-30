@@ -1,23 +1,13 @@
 # -*- coding: utf-8 -*-
-
 """
 Bot - Automação de Votos
 ===================
-
-Descrição:
------------
-Este programa realiza o voto automático na candidata selecionada do reality show "A Bordo". 
-
-Autor:
--------
-Ariel Reises @arielreises
-
-Data de Criação:
-----------------
-19 de dezembro de 2023
+Descrição:          Este programa realiza o voto automático na candidata selecionada do reality show "A Bordo". 
+Autor:              Ariel Reises @arielreises
+Data de Criação:    19 de dezembro de 2023
 """
 
-# Importação das bibliotecas necessárias
+# Importando a biblioteca Selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -26,7 +16,7 @@ gecko_path = r"C:\Users\User\anaconda3\geckodriver.exe" # Caminho para utilizar 
 navegador = webdriver.Firefox()                         # Seleção do navegador Mozilla Firefox
 
 
-# Determinação da Função
+# Determinando a Função
 def realizar_tarefa(navegador):
     # Seleciona por XPath o elemento desejado
     elemento_opcao = navegador.find_element(By.XPATH, '//*[@id="PDI_answer********"]')
